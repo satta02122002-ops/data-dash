@@ -235,7 +235,7 @@ const deleteDataset = async (req, res) => {
 // Get chart data
 const getChartData = async (req, res) => {
   const { id } = req.params;
-  const { xColumn, yColumn, aggregation = 'sum', chartType, filters } = req.query;
+  const { x_column: xColumn, y_column: yColumn, aggregation = 'sum', chart_type: chartType, filters } = req.query;
 
   const dataset = await query('SELECT * FROM datasets WHERE id = $1', [id]);
   if (!dataset.rows.length) return res.status(404).json({ error: 'Dataset not found' });
