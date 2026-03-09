@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-surface-dark rounded-xl shadow-card border border-gray-100 dark:border-gray-700/50;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-4 py-2 rounded-lg
+           transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600
+           text-gray-700 dark:text-gray-200 font-medium px-4 py-2 rounded-lg
+           transition-all duration-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400
+           px-3 py-2 rounded-lg transition-colors duration-200;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-600
+           bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+           placeholder-gray-400 dark:placeholder-gray-500
+           focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500
+           transition-colors duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400
+           hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100
+           transition-all duration-200 text-sm font-medium;
+  }
+
+  .sidebar-link.active {
+    @apply bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400;
+  }
+}
+
+/* React Grid Layout overrides */
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+
+.react-grid-item.react-grid-placeholder {
+  @apply bg-primary-200 dark:bg-primary-800 opacity-50 rounded-xl;
+}
+
+.react-resizable-handle {
+  @apply opacity-0;
+}
+
+.react-grid-item:hover .react-resizable-handle {
+  @apply opacity-100;
+}
+
+/* Chart container */
+.chart-container {
+  @apply w-full h-full;
+}
