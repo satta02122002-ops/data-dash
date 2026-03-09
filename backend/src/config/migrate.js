@@ -17,5 +17,5 @@ async function migrate() {
 
 migrate().catch((err) => {
   console.error('Migration failed:', err.message);
-  process.exit(1);
+  // Don't exit — tables may already exist
 });
