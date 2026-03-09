@@ -69,7 +69,7 @@ const useAuthStore = create(
     }),
     {
       name: 'datadash-auth',
-      partializers: (state) => ({
+      partialize: (state) => ({
         accessToken: state.accessToken,
         refreshToken: state.refreshToken,
         user: state.user,

@@ -46,6 +46,17 @@ export default function DashboardsPage() {
     }
   };
 
+  if (!currentWorkspaceId) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">Setting up your workspace...</p>
+          <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">If this persists, try logging out and back in.</p>
+        </div>
+      </div>
+    );
+  }
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
