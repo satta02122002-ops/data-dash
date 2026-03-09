@@ -75,6 +75,7 @@ const getDashboard = async (req, res) => {
 
   const dashResult = await query(
     `SELECT d.*, ds.name as dataset_name, ds.columns_metadata, ds.file_type,
+            ds.file_path, ds.cleaned_file_path,
             u.name as created_by
      FROM dashboards d
      LEFT JOIN datasets ds ON ds.id = d.dataset_id
@@ -106,7 +107,8 @@ const getPublicDashboard = async (req, res) => {
   const { shareToken } = req.params;
 
   const result = await query(
-    `SELECT d.*, ds.name as dataset_name, ds.columns_metadata
+    `SELECT d.*, ds.name as dataset_name, ds.columns_metadata,
+            ds.file_path, ds.cleaned_file_path
      FROM dashboards d
      LEFT JOIN datasets ds ON ds.id = d.dataset_id
      WHERE d.share_token = $1 AND d.is_public = true`,
