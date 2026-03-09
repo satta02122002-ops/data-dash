@@ -5,7 +5,7 @@ services:
     runtime: python
     rootDir: python-service
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn src.main:app --host 0.0.0.0 --port $PORT --app-dir .
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --app-dir src
     envVars:
       - key: UPLOAD_DIR
         value: /tmp/uploads
