@@ -89,7 +89,9 @@ export default function DatasetUploadPage() {
         await dashboardApi.addWidget(dashboard.id, {
           type: widget.type,
           title: widget.title,
-          config: widget.config,
+          config: widget.type === 'kpi'
+            ? { ...widget.config, value: widget.value, format: widget.format }
+            : widget.config,
           position: layoutItem
             ? { x: layoutItem.x, y: layoutItem.y, w: layoutItem.w, h: layoutItem.h }
             : { x: (i % 3) * 4, y: Math.floor(i / 3) * 3, w: 4, h: 3 },

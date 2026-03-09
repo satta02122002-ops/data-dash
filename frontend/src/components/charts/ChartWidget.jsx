@@ -136,7 +136,7 @@ export default function ChartWidget({ widget, datasetId, filePath, filters, onEd
       y_column: config.y_column,
       aggregation: config.aggregation || 'sum',
       chart_type: type,
-      filters: filters ? JSON.stringify(filters) : undefined,
+      filters: filters && Object.keys(filters).length > 0 ? JSON.stringify(filters) : undefined,
       file_path: filePath,
     }).then((r) => r.data),
     {

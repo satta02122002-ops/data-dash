@@ -253,7 +253,7 @@ const getChartData = async (req, res) => {
         y_column: yColumn,
         aggregation,
         chart_type: chartType,
-        filters: filters ? JSON.stringify(filters) : undefined,
+        filters: filters || undefined,
       },
     });
 
