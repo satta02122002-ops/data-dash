@@ -35,7 +35,7 @@ api.interceptors.response.use(
       }
 
       try {
-        const { data } = await axios.post('/api/auth/refresh', { refreshToken: rToken });
+        const { data } = await axios.post(`${import.meta.env.VITE_API_URL || ''}/api/auth/refresh`, { refreshToken: rToken });
 
         // Update stored auth
         const authState = JSON.parse(localStorage.getItem('datadash-auth') || '{}');
