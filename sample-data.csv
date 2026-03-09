@@ -1,0 +1,31 @@
+Date,Region,Product,Sales,Units,Profit,Category
+2024-01-05,North,Laptop Pro,1200,3,360,Electronics
+2024-01-08,South,Wireless Mouse,45,12,18,Accessories
+2024-01-10,East,Laptop Pro,1200,2,240,Electronics
+2024-01-12,West,Keyboard,85,8,34,Accessories
+2024-01-15,North,Monitor 27",320,5,96,Electronics
+2024-01-18,South,Laptop Pro,1200,4,480,Electronics
+2024-01-20,East,Webcam HD,95,6,28.5,Accessories
+2024-01-22,West,Monitor 27",320,3,57.6,Electronics
+2024-02-01,North,Wireless Mouse,45,20,36,Accessories
+2024-02-03,South,Keyboard,85,10,42.5,Accessories
+2024-02-07,East,Laptop Pro,1200,6,720,Electronics
+2024-02-10,West,Webcam HD,95,9,42.75,Accessories
+2024-02-14,North,Monitor 27",320,7,134.4,Electronics
+2024-02-18,South,Laptop Pro,1200,5,600,Electronics
+2024-02-21,East,Keyboard,85,15,63.75,Accessories
+2024-02-25,West,Wireless Mouse,45,18,32.4,Accessories
+2024-03-01,North,Laptop Pro,1200,8,960,Electronics
+2024-03-05,South,Monitor 27",320,4,76.8,Electronics
+2024-03-09,East,Webcam HD,95,11,52.25,Accessories
+2024-03-12,West,Laptop Pro,1200,7,840,Electronics
+2024-03-15,North,Keyboard,85,20,85,Accessories
+2024-03-19,South,Wireless Mouse,45,25,45,Accessories
+2024-03-22,East,Monitor 27",320,6,115.2,Electronics
+2024-03-25,West,Laptop Pro,1200,9,1080,Electronics
+2024-04-02,North,Webcam HD,95,14,66.5,Accessories
+2024-04-06,South,Keyboard,85,18,76.5,Accessories
+2024-04-10,East,Monitor 27",320,8,153.6,Electronics
+2024-04-14,West,Wireless Mouse,45,30,54,Accessories
+2024-04-18,North,Laptop Pro,1200,10,1200,Electronics
+2024-04-22,South,Webcam HD,95,16,76,Accessories
